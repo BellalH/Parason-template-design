@@ -18,12 +18,12 @@
 </head>
 <body>
 <!-- header navbar start from here -->
-  <header class="header">
+  <header>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" id="home" href="#">
               <img src="img/logo.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,16 +33,20 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">feature</a>
+                  <a class="nav-link" href="#feature">feature</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">price</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">pages</a>
+                  <ul class="sub-menu">
+                    <li><a href="#">page 01</a></li>
+                    <li><a href="#">page 02</a></li>
+                  </ul>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">contact</a>
@@ -83,7 +87,7 @@
 <!-- banner section end -->
 
 <!-- Awesome soft feature start -->
-  <section class="awesomeSoft-feature">
+  <section id="feature" class="awesomeSoft-feature">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -224,13 +228,6 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
   <div class="row">
     <div class="col-md-4">
       <div class="card text-center">
@@ -241,11 +238,11 @@
         </div>
         <div class="card-body">
           <ul>
-            <li>Unlimited Entrance</li>
-            <li>Comfortable Seat</li>
-            <li>Paid Certificate</li>
-            <li>Day One Workshop</li>
-            <li>One Certificate</li>
+            <li><span>&#10004;</span> Unlimited Entrance</li>
+            <li><span>&#10004;</span> Comfortable Seat</li>
+            <li><span>&#10004;</span> Paid Certificate</li>
+            <li><span class="cross-sym">&#x2716;</span> Day One Workshop</li>
+            <li><span class="cross-sym">&#x2716;</span> One Certificate</li>
           </ul>
         </div>
         <div class="card-footer text-muted">
@@ -262,11 +259,11 @@
         </div>
         <div class="card-body">
           <ul>
-            <li>Unlimited Entrance</li>
-            <li>Comfortable Seat</li>
-            <li>Paid Certificate</li>
-            <li>Day One Workshop</li>
-            <li>One Certificate</li>
+            <li><span>&#10004;</span> Unlimited Entrance</li>
+            <li><span>&#10004;</span> Comfortable Seat</li>
+            <li><span>&#10004;</span> Paid Certificate</li>
+            <li><span class="cross-sym">&#x2716;</span> Day One Workshop</li>
+            <li><span class="cross-sym">&#x2716;</span> One Certificate</li>
           </ul>
         </div>
         <div class="card-footer text-muted">
@@ -283,11 +280,11 @@
         </div>
         <div class="card-body">
           <ul>
-            <li>Unlimited Entrance</li>
-            <li>Comfortable Seat</li>
-            <li>Paid Certificate</li>
-            <li>Day One Workshop</li>
-            <li>One Certificate</li>
+            <li><span>&#10004;</span> Unlimited Entrance</li>
+            <li><span>&#10004;</span> Comfortable Seat</li>
+            <li><span>&#10004;</span> Paid Certificate</li>
+            <li><span class="cross-sym">&#x2716;</span> Day One Workshop</li>
+            <li><span class="cross-sym">&#x2716;</span> One Certificate</li>
           </ul>
         </div>
         <div class="card-footer text-muted">
@@ -461,7 +458,15 @@
 
 
 
-
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <img class="img" src="img/c-logo-2.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -520,7 +525,13 @@
     }
   })
 </script>
-
+<!-- sticky header -->
+  <script type="text/javascript">
+    window.addEventListener("scroll",function(){
+      var topheader = document.querySelector("header");
+      topheader.classList.toggle("sticky",window.scrollY>300)
+    })
+  </script>
 </body>
 
 </html>
